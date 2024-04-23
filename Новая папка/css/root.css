@@ -113,7 +113,7 @@ header .section1 img{
 
 .section2 .right a:hover{
     color:var(--mgreen);
-    background-color: #132a13;
+    background-color: var(--black-green);
 
     transition: 1s;
 }
@@ -322,3 +322,157 @@ header .section1 img{
 
 /* THIRD END */
 
+/* FOOTER */
+footer{
+    height: 100vh;
+
+    background: rgb(118,200,147);
+    background: linear-gradient(0deg, rgba(118,200,147,1) 82%, rgba(152,213,174,1) 100%);
+}
+/* FOOTER END */
+
+
+
+/* MEDIA */
+@media screen and (max-width: 1280px) {
+header .section2{
+    flex-direction: column;
+}
+
+header .section2 .left{
+    width: 80%;
+    height: 30%;
+    text-align: center;
+}
+
+header .section2 .right a{
+    width: 100%;
+}
+
+.first{
+    flex-direction: column;
+}
+
+.first .content1{
+    width: 80%;
+    border: none;
+}
+
+.first .wrapper{
+    width: 80%;
+}
+
+.first .content2{
+    border: none;
+    width: 100%;
+}
+
+.first .content3{
+    display: none;
+    border: none;
+}
+
+.third .content .help{
+    height: 30%;
+}
+}
+
+@media (max-width: 1000px) {
+    .first .content1{
+        width: 90%;
+    }
+    
+    .first .content2 img{
+        width: 100vw;
+    }
+
+    .second .content{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .second .content .section2{
+        flex-direction: column;
+
+        font-size:calc(12px + 8 * (100vw - 320px) / 880);
+    }
+
+    .second .content .section1{
+        display: none;
+    }
+
+    .third .content {
+        width: 90%;
+
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (max-width: 768px) {
+    header img{
+        display: none;
+    }
+
+    header .content .section2 .right{
+        font-size:calc(18px + 8 * (100vw - 320px) / 880);
+    }
+
+    .first .content1 .first_text{
+        display: none;
+    }
+
+    .first .content1 .second_text{
+        font-size:calc(14px + 8 * (100vw - 320px) / 880);
+    }
+
+    .second .content{
+        width: 100%;
+    }
+
+    .second .content .section2{
+        width: 100%;
+    }
+
+    .third .content{
+        flex-direction: column;
+    }
+    
+    .third .content .help{
+        width: 80%;
+        height: 20%;
+    }
+}
+
+@media (max-width: 360px) {
+
+    header .content .section2 .right{
+        width: 100%;
+        margin-left: -10vw;
+    }
+
+    .second .content .section2 p{
+        width: 100%;
+    }
+}
+
+@media (max-height: 800px) {
+    header .content .section1{
+        display: none;
+        height: 0;
+        width: 0;
+    }
+
+    header .content .section2{
+        height: 90vh;
+    }
+
+    .first .content1 .second_text{
+        font-size:calc(12px + 8 * (100vw - 320px) / 880);
+    }
+
+    .second .content .section2 p{
+        font-size:calc(10px + 8 * (100vw - 320px) / 880);
+    }
+}
+/* MEDIA END */
