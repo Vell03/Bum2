@@ -33,6 +33,33 @@ body{
     color: var(--black-green)
 }
 
+.anchor{
+    width: 2.5vw;
+    height: 5vh;
+
+    bottom: 10vh;
+    left: 5vw;
+
+    font-weight: 600;
+    font-size: xx-large;
+
+    position: fixed;
+
+    color: var(--black-green);
+    background-color: var(--mgreen);
+
+    border: 2px solid var(--black-green);
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    display:none;
+
+    transition: opacity 0.3s ease;
+
+    opacity: 0;
+}
+
 /* HEADER */
 header{
     width: 100%;
@@ -61,8 +88,6 @@ header .section1 img{
 
     top: 0;
     left: 2vw;
-
-    position: fixed;
 }
 
 .section2{
@@ -117,6 +142,7 @@ header .section1 img{
 
     transition: 1s;
 }
+
 /* HEADER END */
 
 /* FIRST */
@@ -298,36 +324,86 @@ header .section1 img{
     align-items: center;
 }
 
-.third .content .help{
+.help {
     width: 20%;
-    height: 40%;
+    height: auto;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    text-align: center;
 
     border: 2px solid var(--black-green);
     border-radius: 5px;
 
     transition: 1s;
 
-    cursor: pointer;
+
+    overflow: hidden;
 }
 
-.third .content .help:hover{
-    background-color: var(--black-green);
-    color: var(--mgreen);
+.help img {
+    max-width: 100%;
 }
 
 /* THIRD END */
 
+.up {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: transparent; /* Удаляем фон */
+    border: none; /* Удаляем обводку */
+    padding: 0; /* Уменьшаем внутренние отступы */
+    width: 40px; /* Устанавливаем ширину кнопки */
+    height: 40px; /* Устанавливаем высоту кнопки */
+    cursor: pointer;
+}
+
+.up img {
+    width: 100%;
+}
+
 /* FOOTER */
 footer{
-    height: 100vh;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
     background: rgb(118,200,147);
     background: linear-gradient(0deg, rgba(118,200,147,1) 82%, rgba(152,213,174,1) 100%);
+}
+
+footer .about{
+    width: 25%;
+    height: 100%;
+
+    margin-left: 10vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: justify;
+
+    font-size:calc(2px + 8 * (100vw - 320px) / 880);
+}
+
+footer .contacts{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size:calc(10px + 8 * (100vw - 320px) / 880);
 }
 /* FOOTER END */
 
@@ -372,8 +448,8 @@ header .section2 .right a{
     border: none;
 }
 
-.third .content .help{
-    height: 30%;
+footer p{
+    font-size:calc(4px + 8 * (100vw - 320px) / 880);
 }
 }
 
@@ -407,6 +483,9 @@ header .section2 .right a{
         justify-content: space-evenly;
     }
 
+    .anchor{
+        top: -1555555555555555px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -442,6 +521,15 @@ header .section2 .right a{
         width: 80%;
         height: 20%;
     }
+
+    footer .about{
+        display: none;
+        font-size:calc(6px + 8 * (100vw - 320px) / 880);
+    }
+
+    footer .contacts{
+        height: 80%;
+    }
 }
 
 @media (max-width: 360px) {
@@ -453,6 +541,10 @@ header .section2 .right a{
 
     .second .content .section2 p{
         width: 100%;
+    }
+
+    footer p{
+        font-size:calc(7px + 8 * (100vw - 320px) / 880);
     }
 }
 
